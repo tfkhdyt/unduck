@@ -204,4 +204,15 @@ textarea {
   .copy-button:active {
     background: #333;
   }
+
+  /* Update url-input width to be 100% since container will control max width */
+  .url-input,
+  .bang-input {
+    padding: 8px 12px;
+    border: 1px solid #3d3d3d;
+    border-radius: 4px;
+    width: 100%;
+    background: #191919;
+    color: #fff;
+  }
 }
