@@ -2,8 +2,8 @@ module.exports = {
   apps: [
     {
       name: "Unduck", // Give your app a meaningful name
-      script: "pnpm", // Use 'pnpm' as the script
-      args: "preview --port 6942", // Pass the preview command and port as arguments
+      script: "npm", // Use 'pnpm' as the script
+      args: "run preview -- --port 6942", // Pass the preview command and port as arguments
       // instances: "max", // Use 'max' to utilize all CPU cores in cluster mode
       // exec_mode: "cluster", // Enable cluster mode
       autorestart: true, // Automatically restart if the app crashes
