@@ -1,0 +1,28 @@
+# docker-compose.yml
+
+version: "3.8" # Specify the Compose file version
+
+services:
+  # Define the service for your Vite application
+  unduck:
+    # Build the Docker image using the Dockerfile in the current directory
+    build:
+      context: . # Use the current directory as the build context
+      dockerfile: Dockerfile # Specify the Dockerfile name
+    container_name: Unduck # (Optional) Assign a name to the container
+    ports:
+      # Map port 8080 on the host to port 6942 in the container (Updated from 80)
+      - "6942:80"
+    # (Optional) Restart policy
+    # restart: unless-stopped
+    # (Optional) Add environment variables if your app needs them
+    # environment:
+    #   - VITE_API_URL=http://api.example.com
+    #   - NODE_ENV=production
+# (Optional) Define volumes if needed, e.g., for persistent data
+# volumes:
+#   my-data:
+
+# (Optional) Define networks if needed
+# networks:
+#   my-network:
